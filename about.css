@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff8ef;
+    background-color: #111111;
+}
+.intro{
+    h1{
+        text-align: center;
+        padding: 15px;
+        border: 2px solid black;
+        text-decoration:underline;
+    }
+    h2{
+        margin: 5px;
+    }
+    p{
+        padding: 5px;
+    }
+}
+.offer{
+    padding: 10px;
+}
+.choose{
+
+    padding-bottom: 10px;
+    h2{
+        text-align: center;
+    }
+}
+.hungry{
+    border-top: 2px solid black;
+    text-align: center;
+    padding-top: 10px;
+    h2{
+        margin-bottom: 10px;
+    }
+    p{
+        margin-bottom: 10px;
+    }
+    button{
+        background-color: #1b0b05;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px ;
+    }
+}
