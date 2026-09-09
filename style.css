@@ -5,161 +5,255 @@
 }
 body{
     background-color:#f5e6d3;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 /*.................. header................. */
 header{
     background-color: #111111;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 .logo{
     color:#F5F5F5;
-    font-size:35px;
-    font-weight: 600;
-    padding:10px ;
-
+    font-size: clamp(14px, 4vw, 32px);
+    font-weight: 700;
+    padding:10px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 nav{
     display:flex;
-    align-items:center ;
+    align-items:center;
     justify-content:space-between;
-    padding-right: 25px;
-    padding-left: 25px;
+    flex-wrap: nowrap;
+    padding: 6px clamp(8px, 3vw, 25px);
+    gap: clamp(6px, 2vw, 20px);
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+nav::-webkit-scrollbar{
+    display: none;
 }
 .nav-links{
     display: flex;
-    gap: 30px;
-    margin-left: auto;
+    gap: clamp(0.4rem, 2vw, 2rem);
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, 1.2vw, 10px);
+    flex-wrap: nowrap;
+    flex-shrink: 0;
 }
 li{
     display: inline-block;
     list-style: none;
+    white-space: nowrap;
 }
 a{
-    color:#F5F5F5 ;
+    color:#F5F5F5;
     text-decoration: none;
     font-weight: 500;
+    font-size: clamp(11px, 1.6vw, 16px);
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+a:hover{
+    color: #E63946;
 }
 nav button{
-    margin-left: 30px;
-    background-color:black;
+    background-color: black;
     color: #F5F5F5;
-    font-size:15px;
+    font-size: clamp(10px, 1.5vw, 15px);
     text-align: center;
-    padding: 5px;
+    padding: clamp(5px, 1vw, 7px) clamp(8px, 2vw, 16px);
+    border: 1px solid #2a2a2a;
     border-radius: 10px;
     display: block;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 nav button:hover{
-        background-color: #241f20;
-        transform: scale(1.10);
-    }
-    
+    background-color: #241f20;
+    transform: scale(1.06);
+}
+.menu-btn{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(3px, 0.8vw, 5px);
+    width: clamp(34px, 5vw, 42px);
+    height: clamp(34px, 5vw, 42px);
+    padding: 0;
+    background-color: black;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.menu-btn span{
+    display: block;
+    width: clamp(16px, 2.4vw, 20px);
+    height: 2px;
+    background-color: #F5F5F5;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+.menu-btn:hover{
+    background-color: #241f20;
+    transform: scale(1.06);
+}
+.menu-btn:hover span{
+    background-color: #E63946;
+}
 /* .................Section Features................. */
 .hi{
     text-align: center;
     background-color: #111111;
-    padding: 20px;
+    padding: clamp(16px, 3vw, 20px);
     color: #F5F5F5;
     border-bottom: 2px solid #C1121F;
-    border-top: 2px solid #C1121F ;
-    
+    border-top: 2px solid #C1121F;
 }
 .hi h2 {
-
     color: #E63946;
     margin-bottom: 2px;
+    font-size: clamp(16px, 2.6vw, 22px);
+    letter-spacing: 0.5px;
 }
 .hi h1 {
     color: #F5F5F5;
+    font-size: clamp(22px, 4.5vw, 36px);
+}
+.features{
+    background-color: #111111;
+    padding: clamp(14px, 3vw, 30px);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(10px, 1.6vw, 20px);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .feature-box{
     background-color: #1C1C1C;
     text-align: center;
-    display: inline-block;
-    vertical-align: top;
-    height: 300px;
-    width: 297px;
+    min-height: 220px;
+    height: auto;
+    width: 100%;
+    min-width: 0;
     border: 1px solid #C1121F;
-    padding: 48px 24px;
-    margin: 10px;
+    padding: clamp(20px, 3vw, 48px) clamp(14px, 2vw, 24px);
+    margin: 0;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.feature-box:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+    border-color: #E63946;
 }
 .feature-box h1{
-    font-size: 40px;
+    font-size: clamp(24px, 3vw, 40px);
     align-items: center;
     justify-content: center;
     display: flex;
-    margin: 0 auto 20px;
-    width: 80px;
-    height: 80px;
-    padding: 1px 80px ;
+    margin: 0 auto clamp(12px, 2vw, 20px);
+    width: clamp(64px, 8vw, 80px);
+    height: clamp(64px, 8vw, 80px);
+    padding: 0;
     border: 1px solid #C1121F;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(230, 57, 70, 0.35);
+    flex-shrink: 0;
 }
 .feature-box h3{
-    margin-bottom: 12px;
+    margin-bottom: clamp(6px, 1.2vw, 12px);
     color: #F5F5F5;
+    font-size: clamp(15px, 1.8vw, 20px);
+    line-height: 1.25;
 }
 .feature-box p {
     color: #B8B8B8;
+    font-size: clamp(12px, 1.3vw, 15px);
+    line-height: 1.45;
 }
-.features{
-    background-color: #111111;
-    padding:30px ;
-}
+
 /* ....................Product.................. */
 .prod{
     color: #F1F1F1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 25px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 25px);
     background-color:#1C1C1C;
-    padding: 10px;
+    padding: clamp(10px, 2vw, 14px);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .pro{
     background-color: #1E1E1E;
     border: 1px solid #811212;
     border-radius: 10px;
-    padding: 15px;
-     
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35); 
+    padding: clamp(10px, 1.5vw, 15px);
+    min-width: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
     color: #F1F1F1;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pro:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
 }
 .pro h4{
     color: #E63946;
-    font-size: 20px;
+    font-size: clamp(13px, 1.6vw, 20px);
     font-weight: bold;
     padding-top:5px;
 }
 .pro img {
     width: 100%;
     border-radius: 10px;
-    height: 300px;
+    height: clamp(160px, 28vw, 300px);
     object-fit: cover;
-    border-radius: 10px;
 }
 h5{
     text-align: center;
-    font-size: 20px;
+    font-size: clamp(13px, 1.8vw, 20px);
     font-weight: bold;
     padding-bottom: 5px;
 }
 .name p{
     min-height: 50px;
+    font-size: clamp(11px, 1.4vw, 15px);
+    color: #C9C9C9;
 }
 .name button{
-    background-color:rgb(105, 28, 28) ;
+    background-color: rgb(105, 28, 28);
     color: antiquewhite;
     text-align: center;
-    padding: 5px;
+    padding: 7px 14px;
     border-radius: 10px;
-    margin: 0% auto;
+    margin: 8px auto 0;
     display: block;
-    
+    font-size: clamp(11px, 1.4vw, 14px);
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
+.name button:hover{
+    background-color: rgb(140, 36, 36);
+    transform: scale(1.05);
+}
+
 /* ..................footer.................. */
 footer{
     display: flex;
@@ -167,21 +261,76 @@ footer{
     text-decoration: none;
     text-align: center;
     justify-content:space-between;
-    padding: 10px;
-    padding-right: 25px;
-    padding-left: 25px;
+    align-items: center;
+    padding: 10px clamp(14px, 3vw, 25px);
+    flex-wrap: wrap;
+    gap: 10px;
 }
 footer p{
-    font-size:25px;
+    font-size: clamp(14px, 3vw, 22px);
     font-weight: 300;
     padding:10px;
-    color: rgb(218, 0, 0);
+    color: #F5F5F5;
 }
 footer a{
     padding-left: 10px;
-    color: rgb(218,0,0);
+    color: #F5F5F5;
+    font-size: clamp(12px, 1.5vw, 15px);
+    transition: opacity 0.2s ease;
+}
+footer a:hover{
+    color: #E63946;
 }
 .footer-links{
     padding: 15px;
-    
+}
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 750px){
+    .nav-links{
+        display: none;
+    }
+    .menu-btn{
+        display: flex;
+    }
+}
+
+@media (max-width: 1024px){
+    .features{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .prod{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px){
+    .prod{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    footer{
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px){
+    .features{
+        grid-template-columns: 1fr;
+    }
+    .prod{
+        grid-template-columns: 1fr;
+    }
+    .pro img{
+        height: 220px;
+    }
+}
+
+@media (max-width: 360px){
+    nav{
+        padding: 6px 6px;
+        gap: 4px;
+    }
+    .logo{
+        padding: 6px;
+    }
 }

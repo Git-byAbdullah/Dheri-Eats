@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dheri Eats</title>
     <link rel="icon"  type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>  
 <body>
     <header>
         <nav>
             <h1 class="logo">Dheri Eats</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Order Now</a></li>
-                <li><a href="#">Gallery</a></li>
-            </ul>
-            <button id="button">Sign In</button>
-            <button id="button">Sign Out.</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Order Now</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button id="button" onclick="window.location.href='login.html'">Sign In</button>
+                    <button id="button">Sign Out</button>
+                    <button class="menu-btn" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
         </nav>
     </header>
+    <section>
         <div class="hi">
             <h2>Why Choose Us</h2>
             <h1>Our Commitment</h1>
@@ -48,15 +60,15 @@
             </div>
         </div>
     </section>
-    <section id="Container"">
+    <section id="Container">
         <div class="hi">
-            <h2> Featured Dishes</h2>
+            <h2>Featured Dishes</h2>
             <h1>Some of our Signature Dishes you would love...</h1>
         </div>
         <div class="prod">
 <!-------------- Pizza ------------->
             <div class="pro">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBsBumL2H2ug2Rlit8L00EzILj3dkV8N6iqNgHwrkX9vrBZv5xD43jYps&s=10" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBsBumL2H2ug2Rlit8L00EzILj3dkV8N6iqNgHwrkX9vrBZv5xD43jYps&s=10" alt="Pizza">
                 <div class="name">
                     <h5>Pizza</h5>
                     <p>Creamy and delicious pizza topped with fresh ingredients.</p>
@@ -66,7 +78,7 @@
             </div>
 <!--------------Chicken Karahi------------->
             <div class="pro">
-                <img src="https://images.pexels.com/photos/30203310/pexels-photo-30203310.jpeg?_gl=1*1vkj8l7*_ga*MjI5Mjc5MTk5LjE3ODc1NTc0MDU.*_ga_8JE65Q40S6*czE3ODc1NjExNzYkbzIkZzEkdDE3ODc1NjE0MzUkajU5JGwwJGgw" alt="">
+                <img src="https://images.pexels.com/photos/30203310/pexels-photo-30203310.jpeg?_gl=1*1vkj8l7*_ga*MjI5Mjc5MTk5LjE3ODc1NTc0MDU.*_ga_8JE65Q40S6*czE3ODc1NjExNzYkbzIkZzEkdDE3ODc1NjE0MzUkajU5JGwwJGgw" alt="Chicken Karahi">
                 <div class="name">
                     <h5>Chicken Karahi</h5>
                     <p>Spicy and flavorful chicken cooked with fresh tomatoes and aromatic spices.</p>
@@ -76,7 +88,7 @@
             </div>
 <!--------------Chicken Nuggets------------->
             <div class="pro">
-                <img src="https://images.pexels.com/photos/10183543/pexels-photo-10183543.jpeg?_gl=1*36pk1j*_ga*MjI5Mjc5MTk5LjE3ODc1NTc0MDU.*_ga_8JE65Q40S6*czE3ODc1NjExNzYkbzIkZzEkdDE3ODc1NjE1NjkkajMwJGwwJGgw" alt="">
+                <img src="https://images.pexels.com/photos/10183543/pexels-photo-10183543.jpeg?_gl=1*36pk1j*_ga*MjI5Mjc5MTk5LjE3ODc1NTc0MDU.*_ga_8JE65Q40S6*czE3ODc1NjExNzYkbzIkZzEkdDE3ODc1NjE1NjkkajMwJGwwJGgw" alt="Chicken Nuggets">
                 <div class="name">
                     <h5>Chicken Nuggets</h5>
                     <p>Crispy and delicious chicken nuggets made with tender and juicy chicken.</p>
@@ -86,7 +98,7 @@
             </div>
 <!------------Burger--------------->
             <div class="pro">
-                <img src="https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg" alt="">
+                <img src="https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg" alt="Burger">
                 <div class="name">
                     <h5>Burger</h5>
                     <p>Juicy and delicious burger packed with fresh ingredients and tasty flavors.</p>
@@ -97,7 +109,7 @@
 
 <!------------Sandwith--------------->
             <div class="pro">
-                <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/cheese_pimiento_sandwitch.jpg" alt="">
+                <img src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/cheese_pimiento_sandwitch.jpg" alt="Sandwich">
                 <div class="name">
                     <h5>Sandwich</h5>
                     <p>Fresh and tasty sandwich filled with delicious ingredients and flavorful fillings</p>
@@ -107,7 +119,7 @@
             </div>
 <!------------Loaded Fries--------------->
             <div class="pro">
-                <img src="https://images.pexels.com/photos/29285461/pexels-photo-29285461.jpeg?_gl=1*9n4w56*_ga*MjI5Mjc5MTk5LjE3ODc1NTc0MDU.*_ga_8JE65Q40S6*czE3ODc1NjExNzYkbzIkZzEkdDE3ODc1NjEyMzckajU5JGwwJGgw" alt="">
+                <img src="https://images.pexels.com/photos/29285461/pexels-photo-29285461.jpeg?_gl=1*9n4w56*_ga*MjI5Mjc5MTk5LjE3ODc1NTc0MDU.*_ga_8JE65Q40S6*czE3ODc1NjExNzYkbzIkZzEkdDE3ODc1NjEyMzckajU5JGwwJGgw" alt="Loaded Fries">
                 <div class="name">
                     <h5>Loaded Fries</h5>
                     <p>Crispy and delicious fries loaded with creamy sauces and tasty toppings.</p>
@@ -117,7 +129,7 @@
             </div>
 <!-------------Mozzarella sticks-------------->
             <div class="pro">
-                <img src="https://www.taketwotapas.com/wp-content/uploads/2022/08/Homemade-Mozzarella-Sticks-RD-Take-Two-Tapas-20.jpg" alt="">
+                <img src="https://www.taketwotapas.com/wp-content/uploads/2022/08/Homemade-Mozzarella-Sticks-RD-Take-Two-Tapas-20.jpg" alt="Mozzarella Sticks">
                 <div class="name">
                     <h5>Mozzarella Sticks</h5>
                     <p>Crispy and cheesy mozzarella sticks served with a delicious dipping sauce.</p>
@@ -127,7 +139,7 @@
             </div>
 <!-------------Spegatti-------------->
             <div class="pro">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV6m6uOOanWWD1sEp-k6rDo0WKxTiZfrZUnDJ-LifWQI1N7p5r6HbpwGo&s=10" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV6m6uOOanWWD1sEp-k6rDo0WKxTiZfrZUnDJ-LifWQI1N7p5r6HbpwGo&s=10" alt="Spaghetti">
                 <div class="name">
                     <h5>Spaghetti</h5>
                     <p>Delicious and flavorful spaghetti tossed with fresh ingredients and tasty sauce.</p>
@@ -137,7 +149,7 @@
             </div>
 <!-------------Chocolate Pastry-------------->
             <div class="pro">
-                <img src="https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipesmedia/recipes/retail/x17/2003/webp/feb/17244-caramel-topped-ice-cream-dessert-600x600.webp" alt="">
+                <img src="https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipesmedia/recipes/retail/x17/2003/webp/feb/17244-caramel-topped-ice-cream-dessert-600x600.webp" alt="Chocolate Pastry">
                 <div class="name">
                     <h5>Chocolate Pastry</h5>
                     <p>Soft and delicious chocolate pastry layered with rich and creamy chocolate.</p>
@@ -147,7 +159,7 @@
             </div>
 <!-------------Brownie-------------->
            <div class="pro">
-                <img src="https://images.openai.com/static-rsc-4/jw7xn55jvv8m9W32An9WS5uo3zuhspx12cusLhGfjHf7-Lxxbu_hFhlMdH-6a13FtIV_SSoh40mqmIoowXGTeBlsEd2eDHv6a5dCzg-JBb8l0dXK9gVbonyXdLXIxs0oH6ZATNvOlSyG0JKzsJmSgmqmo0615C9BT8rkQG2nl5mDTGnIZkov2RnkjjCYCYVy?purpose=fullsize" alt="">
+                <img src="https://images.openai.com/static-rsc-4/jw7xn55jvv8m9W32An9WS5uo3zuhspx12cusLhGfjHf7-Lxxbu_hFhlMdH-6a13FtIV_SSoh40mqmIoowXGTeBlsEd2eDHv6a5dCzg-JBb8l0dXK9gVbonyXdLXIxs0oH6ZATNvOlSyG0JKzsJmSgmqmo0615C9BT8rkQG2nl5mDTGnIZkov2RnkjjCYCYVy?purpose=fullsize" alt="Brownie">
                 <div class="name">
                     <h5>Brownie</h5>
                     <p>Rich and delicious chocolate brownie with a soft and fudgy texture.</p>
@@ -157,7 +169,7 @@
             </div> 
 <!----------Spin Rolls-------------->
             <div class="pro">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ZRY6P_nnwE9_Uk8qz_p_uvxrILeubV_8jVRmgTtiZHVLDWsayOAP6YU&s=10" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ZRY6P_nnwE9_Uk8qz_p_uvxrILeubV_8jVRmgTtiZHVLDWsayOAP6YU&s=10" alt="Spin Rolls">
                 <div class="name">
                     <h5>Spin Rolls</h5>
                     <p>Crispy and delicious spin rolls filled with flavorful ingredients and tasty seasoning.</p>
@@ -167,7 +179,7 @@
             </div> 
 <!----------Donuts-------------->
             <div class="pro">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpb-2TBMRxUby6k395XC4sgg5Ll3euLw7Ku398KFnXVk5tbzvT9V-i5EGU&s=10" alt="">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpb-2TBMRxUby6k395XC4sgg5Ll3euLw7Ku398KFnXVk5tbzvT9V-i5EGU&s=10" alt="Donuts">
                 <div class="name">
                     <h5>Donuts</h5>
                     <p>Soft and delicious donuts topped with sweet glaze and rich chocolate for a perfect treat.</p>
@@ -185,4 +197,5 @@
             <a href="#terms-of-use">Terms Of Use</a>
         </div>
     </footer>
+</body>
 </html>
