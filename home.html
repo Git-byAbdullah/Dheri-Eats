@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-site-verification" content="OfBGe7Ceis5n0gYkFJtfsS7YjmbLxrNNZ_BGWQvXcbY" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dheri Eats</title>
@@ -8,30 +9,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="home.css">
 </head>  
 <body>
     <header>
         <nav>
             <h1 class="logo">Dheri Eats</h1>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#">Order Now</a></li>
-                    <li><a href="#">Gallery</a></li>
-                </ul>
-                <div class="nav-buttons">
-                    <button id="button" onclick="window.location.href='login.html'">Sign In</button>
-                    <button id="button">Sign Out</button>
-                    <button class="menu-btn" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Order Now</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button id="button" onclick="window.location.href='login.html'">Sign In</button>
+                <button id="button">Sign Out</button>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </nav>
     </header>
+    <section class="hero">
+        <div class="hero1">
+            <div class="hero-line">Hot & Fresh • Fastest Delivery Across Islamabad & Rawalpindi</div>
+            <h1 class="hero-header">Bite into Perfection with <span>Dheri Eats</span></h1>
+            <p>From our juicy smash burgers and loaded crispy fries to loaded cheesy pizzas and rich Desi Chicken Karahi, we prepare every order with passion, fresh ingredients, and unforgettable flavors.</p>
+            <button class="hero-but">Explore Full Menu</button>
+            <button class="hero-track">Track Active Order</button>
+        </div>
+        <div class="hero2">
+
+    <div class="box">
+
+        <img src="logo.png" alt="logo" class="logo">
+
+        <div class="discount">
+            <div class="discount-percent">10%</div>
+
+            <div class="discount-text">
+                <h3>First Order Discount</h3>
+                <p>Apply promo coupon at checkout</p>
+            </div>
+
+            <div class="coupon">DHERI10</div>
+        </div>
+
+        <div class="orders">
+            ✨ &nbsp; Serving over <b>480+</b> orders daily across town
+        </div>
+
+    </div>
+
+</div>
+
+    </section>
+
     <section>
         <div class="hi">
             <h2>Why Choose Us</h2>
