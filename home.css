@@ -1,17 +1,21 @@
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 body{
-    background-color:#f5e6d3;
+    background-color:#111111;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     width: 100%;
+    overflow-x: hidden;
 }
 /*.................. header................. */
 header{
     background-color: #111111;
     box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    border-bottom:2px solid #C1121F; 
+    position: relative;
 }
 .logo{
     color:#F5F5F5;
@@ -32,9 +36,6 @@ nav{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-nav::-webkit-scrollbar{
-    display: none;
-}
 .nav-links{
     display: flex;
     gap: clamp(0.4rem, 2vw, 2rem);
@@ -48,6 +49,10 @@ nav::-webkit-scrollbar{
     flex-wrap: nowrap;
     flex-shrink: 0;
 }
+.fa-cart-shopping{
+    font-size: 25px;
+    color: #f5f5f5;
+} 
 li{
     display: inline-block;
     list-style: none;
@@ -103,7 +108,7 @@ nav button:hover{
     height: 2px;
     background-color: #F5F5F5;
     border-radius: 2px;
-    transition: background-color 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
 }
 .menu-btn:hover{
     background-color: #241f20;
@@ -111,6 +116,171 @@ nav button:hover{
 }
 .menu-btn:hover span{
     background-color: #E63946;
+}
+/* Hamburger -> X animation when open */
+.menu-btn.open span:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+}
+.menu-btn.open span:nth-child(2){
+    opacity: 0;
+}
+.menu-btn.open span:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
+}
+/*........hero section..................*/
+.hero{
+    background-color: #111111;
+    color: #f5f5f5;
+    padding: clamp(20px, 5vw, 32px) clamp(16px, 6vw, 50px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(24px, 5vw, 60px);
+    align-items: center;
+    justify-content: center;
+}
+.hero1{
+    flex: 1 1 420px;
+    min-width: 0;
+    max-width: 640px;
+}
+.hero2{
+    flex: 1 1 320px;
+    min-width: 0;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.hero-line{
+    text-align: center;
+    font-size: clamp(10px, 1.4vw, 12px);
+    width: 100%;
+    max-width: 500px;
+    padding: 6px 14px;
+    border: 1px solid #C1121F;
+    margin-bottom: 24px;
+    border-radius: 24px;
+}
+.hero-header{
+    font-size: clamp(28px, 6vw, 60px);
+    margin-bottom: 24px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+.hero-header span{
+    color: #811212;
+}
+.hero p{
+    font-size: clamp(14px, 2vw, 18px);
+    margin-bottom: 24px;
+}
+.hero-but{
+    background-color: #C1121F;
+    color:#F1F1F1;
+    padding: clamp(12px, 2vw, 16px) clamp(20px, 3vw, 32px);
+    border: none;
+    border-radius: 10px ;
+    font-size: clamp(13px, 1.6vw, 16px);
+    font-weight:700;
+    margin-right: 15px;
+    margin-bottom: 10px;
+} 
+.hero-but:hover{
+    background-color:#c51e29;
+} 
+.hero-track{
+    background-color: #1C1C1C;
+    color:#F1F1F1;
+    padding: clamp(12px, 2vw, 16px) clamp(20px, 3vw, 32px);
+    border: none;
+    border-radius: 10px ;
+    font-size: clamp(13px, 1.6vw, 16px);
+    font-weight:700;
+    border:1px solid #292929;
+    margin-bottom: 10px;
+}
+.hero-track:hover{
+    border: 1px solid #d6a928;
+    background-color: #272727;
+}
+.box {
+    width: 100%;
+    max-width: 500px;
+    background-color: #1C1C1C;
+    height: auto;
+    padding: clamp(16px, 3vw, 24px);
+    border: 1px solid #811212;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(206, 35, 35, 0.8);
+}
+.box .logo {
+    width: clamp(140px, 40vw, 300px);
+    height: clamp(140px, 40vw, 300px);
+    object-fit: contain;
+    margin-top: 10px;
+}
+.discount {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 90px;
+    background-color: #141414;
+    border: 1px solid #555;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px clamp(10px, 3vw, 20px);
+    box-sizing: border-box;
+    gap: 10px;
+}
+.discount-percent {
+   padding: 10px;
+    background-color: #811212;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(18px, 3vw, 25px);
+    font-weight: bold;
+}
+.discount-text {
+    margin-left: 6px;
+    flex: 1;
+    min-width: 120px;
+}
+.discount-text h3 {
+    font-size: clamp(11px, 1.6vw, 12px);
+    color: white;
+   
+}
+.discount-text p {
+    font-size: clamp(10px, 1.4vw, 11px);
+    color: #ddd;
+    margin: 0;
+}
+.coupon {
+    background-color: #4b3d15;
+    border: 1px solid #d6a928;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: #e5bc3c;
+    font-weight: bold;
+    font-size: clamp(12px, 1.6vw, 14px);
+    white-space: nowrap;
+}
+.orders {
+    margin-top: 25px;
+    text-align: center;
+
+    color: #ddd;
+    font-size: clamp(14px, 2vw, 18px);
+}
+.orders b {
+    color: white;
 }
 /* .................Section Features................. */
 .hi{
@@ -215,6 +385,9 @@ nav button:hover{
     transform: translateY(-4px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
 }
+.pro p{
+    text-align: center;
+}
 .pro h4{
     color: #E63946;
     font-size: clamp(13px, 1.6vw, 20px);
@@ -223,6 +396,7 @@ nav button:hover{
 }
 .pro img {
     width: 100%;
+    max-width: 100%;
     border-radius: 10px;
     height: clamp(160px, 28vw, 300px);
     object-fit: cover;
@@ -288,12 +462,45 @@ footer a:hover{
 @media (max-width: 750px){
     .nav-links{
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #111111;
+        border-bottom: 2px solid #C1121F;
+        padding: 10px clamp(8px, 3vw, 25px);
+        gap: 14px;
+        z-index: 20;
+    }
+    .nav-links.open{
+        display: flex;
     }
     .menu-btn{
         display: flex;
     }
 }
-
+@media(max-width:1050px){
+    .hero-line{
+        margin: 0 auto;
+    }
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero1{
+        max-width: 100%;
+    }
+    .hero-but, .hero-track{
+        margin-right: 8px;
+    }
+    .discount-text h3{
+        text-align: left;
+    }
+    .discount-text p{
+        text-align: left;
+    }
+}
 @media (max-width: 1024px){
     .features{
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -302,7 +509,6 @@ footer a:hover{
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
-
 @media (max-width: 768px){
     .prod{
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -312,20 +518,29 @@ footer a:hover{
         text-align: center;
     }
 }
-
-@media (max-width: 480px){
-    .features{
-        grid-template-columns: 1fr;
+@media (max-width: 380px){
+    .hero-but{
+        padding: 12px 5px;
     }
-    .prod{
-        grid-template-columns: 1fr;
+    .hero-track{
+        padding: 12px 5px
     }
-    .pro img{
-        height: 220px;
+    .hero-line{
+        font-size:8px;
     }
 }
-
-@media (max-width: 360px){
+@media (max-width: 400px){
+    .coupon{
+        padding: 5px;
+    }
+    .discount-text h3{
+        width: fit-content;
+    }
+    .discount-text p{
+        width: fit-content;
+    }
+}
+@media (max-width: 370px){
     nav{
         padding: 6px 6px;
         gap: 4px;
@@ -333,4 +548,9 @@ footer a:hover{
     .logo{
         padding: 6px;
     }
+    .box{
+        padding: 14px;
+    }
 }
+
+  
