@@ -86,6 +86,33 @@ nav button:hover{
     background-color: #241f20;
     transform: scale(1.06);
 }
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background-color: black;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.menu-btn span {
+    width: 18px;
+    height: 2px;
+    background-color: #F5F5F5;
+    border-radius: 2px;
+}
+.menu-btn:hover {
+    background-color: #241f20;
+    transform: scale(1.06);
+}
+.menu-btn:hover span {
+    background-color: #E63946;
+}
 /*........hero section..................*/
 .hero{
     background-color: #111111;
@@ -420,19 +447,9 @@ footer a:hover{
 @media (max-width: 750px){
     .nav-links{
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background-color: #111111;
-        border-bottom: 2px solid #C1121F;
-        padding: 10px clamp(8px, 3vw, 25px);
-        gap: 14px;
-        z-index: 20;
     }
-    .nav-links.open{
-        display: flex;
+    .menu-btn{
+    display: flex;
     }
 }
 @media(max-width:1050px){
