@@ -434,9 +434,6 @@ footer a:hover{
     .nav-links.open{
         display: flex;
     }
-    .menu-btn{
-        display: flex;
-    }
 }
 @media(max-width:1050px){
     .hero-line{
