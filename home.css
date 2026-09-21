@@ -150,15 +150,14 @@ nav button:hover{
     display: flex;
     justify-content: center;
 }
-.hero-line{
+.hero-line {
     text-align: center;
     font-size: clamp(10px, 1.4vw, 12px);
-    width: 100%;
-    max-width: 500px;
     padding: 6px 14px;
     border: 1px solid #C1121F;
-    margin-bottom: 24px;
     border-radius: 24px;
+    margin-bottom: 24px;
+    width: fit-content;
 }
 .hero-header{
     font-size: clamp(28px, 6vw, 60px);
